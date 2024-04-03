@@ -269,9 +269,9 @@ public class Login extends javax.swing.JFrame {
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         // TODO add your handling code here:
-//        QuenMatKhau qmk = new QuenMatKhau();
-//        qmk.setVisible(true);
-//        qmk.setLocationRelativeTo(null);
+        QuenMatKhau qmk = new QuenMatKhau(socket);
+        qmk.setVisible(true);
+        qmk.setLocationRelativeTo(null);
     }//GEN-LAST:event_jLabel6MouseClicked
 
     /**
