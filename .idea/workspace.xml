@@ -4,353 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69f3e715-a997-4f17-b36a-63d8c75d1108" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/AbsoluteLayout.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/JCalendar.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-collections4-4.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-compress-1.24.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-io-2.15.0-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-io-2.15.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-io-2.15.0-test-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-io-2.15.0-tests.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/commons-io-2.15.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/itext-pdfa-5.5.13.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/itext-xtra-5.5.13.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/itextpdf-5.5.13.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.activation-1.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.mail.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jaxb-api-2.3.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jcommon-1.0.23.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jfreechart-1.0.19.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/log4j-api-2.21.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/log4j-core-2.21.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/poi-5.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/poi-examples-5.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/poi-excelant-5.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/poi-javadoc-5.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/poi-ooxml-5.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/poi-ooxml-full-5.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/poi-ooxml-lite-5.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/poi-scratchpad-5.2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/sqljdbc4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/xmlbeans-5.1.1-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/xmlbeans-5.1.1-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/xmlbeans-5.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Font/vuArial.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/Login.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/10207-man-student-light-skin-tone-icon-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/10207-man-student-light-skin-tone-icon-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/10207-man-student-light-skin-tone-icon-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/10207-man-student-light-skin-tone-icon-64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Actions-edit-delete-icon-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Actions-edit-delete-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Actions-edit-delete-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Actions-help-about-icon-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Actions-help-about-icon-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Actions-help-about-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Actions-help-about-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Add-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Apps-preferences-desktop-user-password-icon-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Apps-preferences-desktop-user-password-icon-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/BanHang_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Button-Close-icon-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Button-Close-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Button-Close-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Button-First-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Button-Forward-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Button-Help-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Button-Last-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/CaiDat_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/CaiDat_20px_active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/CongCu_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/CongCu_20px_active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/FAQ-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Fast-backward-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Fast-backward-icon2-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Fast-forward-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Floppy-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/GiamGia_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/GiamGia_20px_active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Help-icon-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Help-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Home-icon-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Hopstarter-Button-Button-Add.24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/KhachHang_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/KhachHang_20px_active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Login-icon-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Login-icon-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Login-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/NhanVien_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/NhanVien_20px_active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/NhapHang_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/NhapHang_20px_active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Occupations-Technical-Support-Representative-Male-Dark-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Occupations-Technical-Support-Representative-Male-Light-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Person-Male-Light-icon-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Person-Male-Light-icon-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Person-Male-Light-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/QLSP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/QLSP_20px - Copy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/QLSP_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/QLSP_20px_active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Question-Help-icon-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Refresh-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H24-ThuocKeSat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H25-HopButNhua.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/H9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/KD01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/KD02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/KD03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/KD04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/KD05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/KD06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/KD07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/KD08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/KD09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/KD10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/SGK01-Toan1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/SGK02-TiengAnh12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/SGK03-SinhHoc11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/SGK04-Toan10T1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/SGK05-Toan2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/SGK06-Toan3Tap2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/SK01-BacHoVoiThieuNienNhiDong.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/SK02-BacHanhLuocKi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/SK03-KyUcTheoDongDoi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/SK04-MuonKiepNhanSinh.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/TrangChu_NV.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/TrangChu_QL.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SanPham/profile01-250px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Save-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Save-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Search-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Shop_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Shop_20px_active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Skip-backward-icon2-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Skip-forward-icon2-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Student-3-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SystemIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/SystemIcon_60px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/ThongKe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/ThongKe_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/ThongKe_20px_active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/Trang-nen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/add_nv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/banhang.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/bill.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/book.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnAdd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnAdd_150px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnBack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnBack_150px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnBill.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnConfirm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnConfirm_150px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnDelete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnDelete_150px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnEdit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnEdit_150px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnFile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnNhapExcel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnSearch_200px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnSearch_40px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnSearch_45px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnView.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/btnXuatExcel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/calendar-background-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/check-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/delete-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/exit_25px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/exit_hover_25px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/gpa-icon-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/gpa-icon-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/gpa-icon-64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/gpa-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/header_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/hinh-nen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/home2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icon-ban-hang.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icon-khach-hang.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icon-nhan-vien.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icon-sach.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icon-vpp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_add_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_agreement_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_angle_down_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_bar_chart_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_calendar_25_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_calendar_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_calendar_31_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_cancel_30px_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_circled_user_male_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_circled_user_male_skin_type_1_2_40px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_client_company_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_commercial_development_management_64px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_company_100px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_company_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_computer_support_99px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_data_backup_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_database_restore_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_delete_30px_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_delete_forever_30px_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_denied_32px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_dossier_folder_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_downloads_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_exit_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_flow_chart_30px_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_futures_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_gift_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_google_mobile_100px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_key_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_login_rounded_down_64px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_maintenance_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_more_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_ms_excel_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_multiple_smartphones_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_ok_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_opened_folder_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_opened_folder_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_password_40px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_person_male_100px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_pie_chart_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_police_badge_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_refresh_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_replay_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_settings_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_settings_30px_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_show_property_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_shutdown_30px_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_small_business_30px_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_student_female_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_support_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_system_information_99px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_thumb_up_99px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_truck_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_undo_40px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_us_dollar_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_user_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_windows_phone_store_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/icons8_wrench_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/khach-hang.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/logout-icon-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/logout-icon-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/logout-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/logout_25px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/logout_hover_25px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/lucky-logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/minimize_25px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/minimize_hover_25px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/ncc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/new-icon-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/new-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/new-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/nhan-vien.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/ok-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/open-file-icon-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/open-file-icon-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/open-file-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/pdf-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/pen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/pen24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/phone-call-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/profile01-250px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/profile_150px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/pwd_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/refresh_40px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/reseller.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/reset.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/search-icon-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/search-icon-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/search-icon-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/search_25px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/search_25px_focus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/search_50px-focus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/search_50px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/thong-ke.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/trangNen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/trangNen_new.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Img/user_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H24-ThuocKeSat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H25-HopButNhua.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/H9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/KD01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/KD02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/KD03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/KD04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/KD05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/KD06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/KD07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/KD08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/KD09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/KD10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/SGK01-Toan1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/SGK02-TiengAnh12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/SGK03-SinhHoc11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/SGK04-Toan10T1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/SGK05-Toan2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/SGK06-Toan3Tap2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/SK01-BacHoVoiThieuNienNhiDong.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/SK02-BacHanhLuocKi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/SK03-KyUcTheoDongDoi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/SK04-MuonKiepNhanSinh.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/TrangChu_NV.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/TrangChu_QL.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SanPham/profile01-250px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/client/App.java" afterDir="false" />
+    <list default="true" id="69f3e715-a997-4f17-b36a-63d8c75d1108" name="Changes" comment="Socket forgot password">
+      <change afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/QuanLyBanHangLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyBanHang.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyBanHang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/TrangNen.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/TrangNen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/ForgotPasswordLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/ForgotPasswordLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/LoginLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/LoginLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/dao/LoginDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/dao/LoginDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/entity/ChiTietHoaDon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/entity/ChiTietHoaDon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/entity/ChiTietPhieuNhap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/entity/ChiTietPhieuNhap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/entity/TaiKhoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/entity/TaiKhoan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/server/ProgressRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/server/ProgressRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/QuenMatKhau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui/QuenMatKhau.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -367,6 +42,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -380,12 +58,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.App.executor": "Run",
+    "Application.App.executor": "Debug",
     "Application.Login.executor": "Run",
+    "Application.QuenMatKhau.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "quang",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/17d/phantan/doan/QLSachClient/lib/xmlbeans-5.1.1.jar",
     "node.js.detected.package.eslint": "true",
@@ -393,18 +72,53 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.54137933",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\17d\phantan\doan\QLSachClient\src\main\java\Gui" />
       <recent name="D:\17d\phantan\doan\QLSachClient" />
       <recent name="D:\17d\phantan\doan\QLSachClient\src\main\java" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.App" />
+      <module name="QLSachClient" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuenMatKhau" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Gui.QuenMatKhau" />
+      <module name="QLSachClient" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.QuenMatKhau" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -422,11 +136,40 @@
       <option name="presentableId" value="Default" />
       <updated>1712042507847</updated>
       <workItem from="1712042508858" duration="17663000" />
-      <workItem from="1712128058240" duration="893000" />
+      <workItem from="1712128058240" duration="5635000" />
+      <workItem from="1712152842207" duration="4206000" />
+      <workItem from="1712189513870" duration="3402000" />
+      <workItem from="1712196828214" duration="2802000" />
+      <workItem from="1712204322785" duration="5034000" />
+      <workItem from="1712233896011" duration="7709000" />
     </task>
+    <task id="LOCAL-00001" summary="Socket forgot password">
+      <option name="closed" value="true" />
+      <created>1712156472653</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712156472654</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Socket forgot password" />
+    <option name="LAST_COMMIT_MESSAGE" value="Socket forgot password" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Gui/Login.java</url>
+          <line>201</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
