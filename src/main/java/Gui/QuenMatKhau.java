@@ -326,7 +326,10 @@ public class QuenMatKhau extends javax.swing.JFrame {
 //        }
         
     }//GEN-LAST:event_jButton2ActionPerformed
-
+//    public static void main(String[] args) throws IOException {
+//        Socket socket = new Socket("localhost", 5000);
+//        new QuenMatKhau(socket).setVisible(true);
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_layma;

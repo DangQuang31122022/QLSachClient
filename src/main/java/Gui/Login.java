@@ -4,12 +4,15 @@
  */
 package Gui;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 //import java.sql.SQLException;
 //import dao.TaiKhoanDAO;
@@ -200,15 +203,15 @@ public class Login extends javax.swing.JFrame {
                 out.println("login");
                 String json = "{\"username\":\"" + jTextField1.getText() + "\",\"password\":\"" + String.valueOf(jPasswordField1.getPassword()) + "\"}";
                 out.println(json);
-                // Receive the response from the server
-                BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                String jsonRespone = reader.readLine();
-                // jsonRespone = {"login":true,"role":true}
-                // jsonRespone = {"login":true,"role":false}
+
+                Scanner sc = new Scanner(socket.getInputStream());
+                String jsonRespone = sc.nextLine();
+
                 JsonObject jsonObject = new JsonParser().parse(jsonRespone).getAsJsonObject();
                 boolean login = jsonObject.get("login").getAsBoolean();
-                boolean role = jsonObject.get("role").getAsBoolean();
+
                 if (login) {
+                    boolean role = jsonObject.get("role").getAsBoolean();
                     // role true: admin
                     if (role) {
                         JOptionPane.showMessageDialog(null, "Bạn Login thành công!");
@@ -233,7 +236,6 @@ public class Login extends javax.swing.JFrame {
                     jTextField1.setText("NV001");
                     jPasswordField1.setText("admin");
                 }
-
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
