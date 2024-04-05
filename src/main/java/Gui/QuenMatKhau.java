@@ -9,11 +9,12 @@ package Gui;
 //import connectDB.ConnectDB;
 //import dao.NhanVienDAO;
 //import entity.taiKhoan;
+import com.google.gson.Gson;
+
 import java.io.*;
 import java.net.Socket;
 import java.sql.SQLException;
-import java.util.Properties;
-import java.util.Random;
+import java.util.*;
 import javax.mail.Authenticator;
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -230,9 +231,15 @@ public class QuenMatKhau extends javax.swing.JFrame {
 //        nhanVienDAO = new NhanVienDAO();
         try {
             PrintWriter pw = new PrintWriter(client.getOutputStream(), true);
-            pw.println("forgotPassword\n");
-            pw.println("checkMail");
-            pw.println(gmail);
+            pw.println("forgotPassword");
+            Map<String, Object> request = new HashMap<>();
+            request.put("isCheckMail", true);
+            request.put("email", gmail);
+
+            // convert map to json
+            String json = new Gson().toJson(request);
+            System.out.println(json);
+            pw.println(json);
 
             // get response from server
             InputStream is = client.getInputStream();
@@ -294,25 +301,30 @@ public class QuenMatKhau extends javax.swing.JFrame {
         if (matKhau.equals(matKhauNhapLai)) {
             try {
                 PrintWriter pw = new PrintWriter(client.getOutputStream(), true);
-                pw.println("forgotPassword\n");
-                pw.println("doiMatKhau");
+                pw.println("forgotPassword");
+                Map<String, Object> request = new HashMap<>();
+                request.put("isCheckMail", false);
+                request.put("email", txt_gmail.getText());
+                request.put("password", matKhau);
+                // convert map to json
+                String json = new Gson().toJson(request);
                 // send json include email and password
-                String json = "{ \"email\": \"" + txt_gmail.getText() + "\", \"password\": \"" + matKhau + "\" }";
                 pw.println(json);
                 // get response from server
                 InputStream is = client.getInputStream();
                 int response = is.read();
                 if (response == 1) {
                     JOptionPane.showMessageDialog(this, "Đặt mật khẩu thành công");
+                    dispose();
                 } else {
                     JOptionPane.showMessageDialog(this, "Đặt mật không khẩu thành công");
                 }
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            JOptionPane.showMessageDialog(this, "Đặt mật khẩu thành công");
         } else {
-            JOptionPane.showMessageDialog(this, "Đặt mật khẩu không thành công");
+            JOptionPane.showMessageDialog(this, "Mật khẩu không trùng khớp!!!", "Cảnh báo",
+                    JOptionPane.INFORMATION_MESSAGE);
         }
 //        taiKhoan tk = taiKhoanDao.timTaiKhoanByEmail(txt_gmail.getText());
 //        if (tk != null) {
@@ -326,10 +338,6 @@ public class QuenMatKhau extends javax.swing.JFrame {
 //        }
         
     }//GEN-LAST:event_jButton2ActionPerformed
-//    public static void main(String[] args) throws IOException {
-//        Socket socket = new Socket("localhost", 5000);
-//        new QuenMatKhau(socket).setVisible(true);
-//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_layma;

@@ -4,27 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69f3e715-a997-4f17-b36a-63d8c75d1108" name="Changes" comment="Socket forgot password">
-      <change afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/QuanLyBanHangLogic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyBanHang.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyBanHang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/TrangNen.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/TrangNen.java" afterDir="false" />
+    <list default="true" id="69f3e715-a997-4f17-b36a-63d8c75d1108" name="Changes" comment="Adjust the logic for the login section on the client">
       <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/ForgotPasswordLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/ForgotPasswordLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/LoginLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/LoginLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/dao/LoginDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/dao/LoginDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/entity/ChiTietHoaDon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/entity/ChiTietHoaDon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/entity/ChiTietPhieuNhap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/entity/ChiTietPhieuNhap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/entity/TaiKhoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/entity/TaiKhoan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/server/ProgressRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/server/ProgressRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Gui/QuenMatKhau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui/QuenMatKhau.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +42,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.App.executor": "Debug",
+    "Application.App.executor": "Run",
     "Application.Login.executor": "Run",
     "Application.QuenMatKhau.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -141,7 +125,8 @@
       <workItem from="1712189513870" duration="3402000" />
       <workItem from="1712196828214" duration="2802000" />
       <workItem from="1712204322785" duration="5034000" />
-      <workItem from="1712233896011" duration="7709000" />
+      <workItem from="1712233896011" duration="9000000" />
+      <workItem from="1712278090120" duration="17210000" />
     </task>
     <task id="LOCAL-00001" summary="Socket forgot password">
       <option name="closed" value="true" />
@@ -151,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712156472654</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adjust the logic for the login section on the client">
+      <option name="closed" value="true" />
+      <created>1712245534089</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712245534089</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,14 +152,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Socket forgot password" />
-    <option name="LAST_COMMIT_MESSAGE" value="Socket forgot password" />
+    <MESSAGE value="Adjust the logic for the login section on the client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust the logic for the login section on the client" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Gui/Login.java</url>
-          <line>201</line>
+          <url>file://$PROJECT_DIR$/src/main/java/Gui/QuenMatKhau.java</url>
+          <line>246</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
