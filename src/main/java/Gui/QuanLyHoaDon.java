@@ -76,12 +76,15 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 			dtm = (DefaultTableModel) jTable_DanhSachHoaDon.getModel();
 
 			List<HoaDon> dshd = (List<HoaDon>) in.readObject();
+			double[] listTongTien = (double[]) in.readObject();
+			int index = 0;
 			for (HoaDon hoaDon : dshd) {
 				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 				String date = sdf.format(hoaDon.getNgayLapHD());
 				Object[] rowData = { hoaDon.getMaHD(), date, hoaDon.getNhanVien().getMaNhanVien(),
-						hoaDon.getKhachHang().getMaKhachHang(), hoaDon.tongTien() };
+						hoaDon.getKhachHang().getMaKhachHang(), listTongTien[index]};
 				dtm.addRow(rowData);
+				index++;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
