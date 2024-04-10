@@ -49,6 +49,7 @@ import java.net.Socket;
 
 import entity.ChiTietHoaDon;
 import entity.HoaDon;
+import entity.Sach;
 
 import java.awt.Desktop;
 import java.awt.Font;
@@ -91,7 +92,6 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 		clearTableHoaDon();
 		try {
 			out.println("loadTblHoaDon");
-//			out.writeUTF("loadTblHoaDon");
 			dtm = (DefaultTableModel) jTable_DanhSachHoaDon.getModel();
 
 			List<HoaDon> dshd = (List<HoaDon>) in.readObject();
@@ -108,6 +108,7 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		out.flush();
 	}
 
 	// clear table sản phẩm
@@ -125,15 +126,22 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 			dtm = (DefaultTableModel) jTable_ChiTietHoaDon.getModel();
 			List<ChiTietHoaDon> listCTHD = (List<ChiTietHoaDon>) in.readObject();
 			for (ChiTietHoaDon chiTietHoaDon : listCTHD) {
-				Object[] rowData = { chiTietHoaDon.getSanPham().getMaSP(), chiTietHoaDon.getSanPham().getTenSP(), null,
-						chiTietHoaDon.getSoLuong(), chiTietHoaDon.getSanPham().getDonGiaBan(),
-						chiTietHoaDon.thanhTien() };
-				dtm.addRow(rowData);
+				if (chiTietHoaDon.getSanPham() instanceof Sach) {
+					Object[] rowData = { chiTietHoaDon.getSanPham().getMaSP(), chiTietHoaDon.getSanPham().getTenSP(),
+							"Sách", chiTietHoaDon.getSoLuong(), chiTietHoaDon.getSanPham().getDonGiaBan(),
+							chiTietHoaDon.thanhTien() };
+					dtm.addRow(rowData);
+				} else {
+					Object[] rowData = { chiTietHoaDon.getSanPham().getMaSP(), chiTietHoaDon.getSanPham().getTenSP(),
+							"VPP", chiTietHoaDon.getSoLuong(), chiTietHoaDon.getSanPham().getDonGiaBan(),
+							chiTietHoaDon.thanhTien() };
+					dtm.addRow(rowData);
+				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
+		out.flush();
 	}
 
 //	public ArrayList<ChiTietHoaDon> getListChiTietHoaDonByHoaDon(String id) {
@@ -404,7 +412,7 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
+		out.flush();
 	}// GEN-LAST:event_btnTimKiemActionPerformed
 
 	private void btnXuatDanhSachHoaDonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnXuatDanhSachHoaDonActionPerformed
@@ -716,7 +724,7 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 			HoaDon hd = (HoaDon) in.readObject();
 			double tongTien = in.readDouble();
 			List<ChiTietHoaDon> listCTHD = (List<ChiTietHoaDon>) in.readObject();
-			
+
 			String path = hd.getMaHD();
 			path = "hoaDonPDF\\" + path + ".pdf";
 			if (!path.matches("(.)+(\\.pdf)$")) {
@@ -806,23 +814,6 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 				doc.add(new Paragraph(" "));
 				String tongCongS = currencyVN.format(tongCong);
 				doc.add(new Paragraph("Tổng cộng: " + tongCongS, font));
-//			String maHD = lblMaHD.getText().trim();
-//			HoaDon hd = hd_dao.getHoaDonTheoMa(maHD);
-//			if (txtTienNhan.getText().trim().length() > 0) {
-//				Double tienNhan = Double.parseDouble(txtTienNhan.getText().trim());
-//				String sTienNhan = currencyVN.format(tienNhan);
-//				doc.add(new Paragraph("Tiền nhận: " + sTienNhan, font));
-//				doc.add(new Paragraph("Tiền thừa: " + lblTienThua.getText().trim(), font));
-//			} else if (txtTienNhan.getText().trim().length() == 0) {
-//				doc.add(new Paragraph("Tiền nhận: " + lblTongTienVAT.getText().trim(), font));
-//			}
-
-//          if (!hd.isTrangThai()) {
-//              doc.add(new Paragraph("Tiền nhận: " + txtTienNhan.getText().trim(), font));
-//              doc.add(new Paragraph("Tiền thừa: " + lblTienThua.getText().trim(), font));
-//          } else {
-//              doc.add(new Paragraph("Đã thanh toán: " + lblTongTienVAT.getText().trim(), font));
-//          }
 				doc.close();
 				if (xacNhan == JOptionPane.YES_OPTION) {
 					Desktop.getDesktop().open(new File(path));
@@ -839,6 +830,7 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		out.flush();
 	}
 
 	// Variables declaration - do not modify//GEN-BEGIN:variables

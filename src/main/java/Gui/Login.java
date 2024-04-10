@@ -31,7 +31,7 @@ public class Login extends javax.swing.JFrame {
     private Socket socket;
 //    private LoginDao LoginDao;
 //    private TaiKhoanDAO TaiKhoanDAO;
-    public static String tenTaiKhoan = null;
+    public static String tenTaiKhoan = "NV001";
 
     public Login(Socket socket) {
         initComponents();
@@ -215,17 +215,17 @@ public class Login extends javax.swing.JFrame {
                     // role true: admin
                     if (role) {
                         JOptionPane.showMessageDialog(null, "Bạn Login thành công!");
-//                        TrangChu_QL tc_ql = new TrangChu_QL();
-//                        tc_ql.setVisible(true);
-//                        tc_ql.setLocationRelativeTo(null);
+                        TrangChu_QL tc_ql = new TrangChu_QL(socket);
+                        tc_ql.setVisible(true);
+                        tc_ql.setLocationRelativeTo(null);
                         System.out.println("Login as admin");
                         dispose();
                     } else {
                         JOptionPane.showMessageDialog(null, "Bạn Login thành công!");
-//                        TrangChu_NV TrangChu_NV = new TrangChu_NV();
-//                        TrangChu_NV.setVisible(true);
-//                        TrangChu_NV.setLocationRelativeTo(null);
-//                        tenTaiKhoan = jTextField1.getText().toString().toUpperCase();
+                        TrangChu_NV TrangChu_NV = new TrangChu_NV(socket);
+                        TrangChu_NV.setVisible(true);
+                        TrangChu_NV.setLocationRelativeTo(null);
+                        tenTaiKhoan = jTextField1.getText().toString().toUpperCase();
                         System.out.println("Login as user");
                         dispose();
                     }
