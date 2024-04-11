@@ -5,11 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69f3e715-a997-4f17-b36a-63d8c75d1108" name="Changes" comment="Adjust the logic for the login section on the client">
-      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QLSach/.idea/jpa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/CustomerLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/StaffLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/SupplierLogic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyKhachHang.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyKhachHang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyNhaCungCap.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyNhaCungCap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyNhanVien.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyNhanVien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/TrangChu_NV.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/TrangChu_NV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/TrangChu_QL.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/TrangChu_QL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/ForgotPasswordLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/ForgotPasswordLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/LoginLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/LoginLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/QuanLyBanHangLogic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/dao/KhachHangDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/dao/KhachHangDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/dao/NhaCungCapDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/dao/NhaCungCapDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/dao/NhanVienDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/dao/NhanVienDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/entity/ChiTietPhieuNhap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/entity/ChiTietPhieuNhap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/entity/KhachHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/entity/KhachHang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/entity/NhaCungCap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/entity/NhaCungCap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/entity/NhanVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/entity/NhanVien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/server/ProgressRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/server/ProgressRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/QuanLyBanHang.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/QuanLyBanHang.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Gui/QuenMatKhau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui/QuenMatKhau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/TrangNen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui/TrangNen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +55,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -40,31 +74,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Application.Login.executor": "Run",
-    "Application.QuenMatKhau.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "quang",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/17d/phantan/doan/QLSachClient/lib/xmlbeans-5.1.1.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.54137933",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Login.executor&quot;: &quot;Run&quot;,
+    &quot;Application.QuenMatKhau.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;quang&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/DocLocal/PhanTan/doan/QLSachClient/src/main/java/Gui&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.54137933&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DocLocal\PhanTan\doan\QLSachClient\src\main\java\Gui" />
       <recent name="D:\17d\phantan\doan\QLSachClient\src\main\java\Gui" />
       <recent name="D:\17d\phantan\doan\QLSachClient" />
       <recent name="D:\17d\phantan\doan\QLSachClient\src\main\java" />
@@ -107,7 +142,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -127,6 +163,10 @@
       <workItem from="1712204322785" duration="5034000" />
       <workItem from="1712233896011" duration="9000000" />
       <workItem from="1712278090120" duration="17210000" />
+      <workItem from="1712748051861" duration="2798000" />
+      <workItem from="1712813337704" duration="4071000" />
+      <workItem from="1712818579689" duration="67000" />
+      <workItem from="1712838198664" duration="10465000" />
     </task>
     <task id="LOCAL-00001" summary="Socket forgot password">
       <option name="closed" value="true" />
@@ -154,16 +194,5 @@
     <MESSAGE value="Socket forgot password" />
     <MESSAGE value="Adjust the logic for the login section on the client" />
     <option name="LAST_COMMIT_MESSAGE" value="Adjust the logic for the login section on the client" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Gui/QuenMatKhau.java</url>
-          <line>246</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
