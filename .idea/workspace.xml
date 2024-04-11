@@ -142,8 +142,12 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+<<<<<<< HEAD
+        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
+=======
         <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
         <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+>>>>>>> 290abc459a538154a364386cb2e881da67e25fd2
       </set>
     </attachedChunks>
   </component>
@@ -163,10 +167,13 @@
       <workItem from="1712204322785" duration="5034000" />
       <workItem from="1712233896011" duration="9000000" />
       <workItem from="1712278090120" duration="17210000" />
+<<<<<<< HEAD
+=======
       <workItem from="1712748051861" duration="2798000" />
       <workItem from="1712813337704" duration="4071000" />
       <workItem from="1712818579689" duration="67000" />
       <workItem from="1712838198664" duration="10465000" />
+>>>>>>> 290abc459a538154a364386cb2e881da67e25fd2
     </task>
     <task id="LOCAL-00001" summary="Socket forgot password">
       <option name="closed" value="true" />
@@ -195,4 +202,18 @@
     <MESSAGE value="Adjust the logic for the login section on the client" />
     <option name="LAST_COMMIT_MESSAGE" value="Adjust the logic for the login section on the client" />
   </component>
+<<<<<<< HEAD
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Gui/QuenMatKhau.java</url>
+          <line>246</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+=======
+>>>>>>> 290abc459a538154a364386cb2e881da67e25fd2
 </project>

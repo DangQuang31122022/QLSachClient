@@ -1,6 +1,9 @@
 package client;
 
 import Gui.Login;
+import Gui.QuanLyHoaDon;
+import Gui.TrangChu_NV;
+import Gui.TrangChu_QL;
 
 import java.io.IOException;
 import java.net.Socket;

@@ -4,8 +4,10 @@
  */
 package Gui;
 
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.net.Socket;
+
 import javax.swing.AbstractAction;
 import javax.swing.ActionMap;
 import javax.swing.InputMap;
@@ -369,12 +371,11 @@ public class TrangChu_QL extends javax.swing.JFrame {
 
     private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
         // TODO add your handling code here:
-//        trangNen.removeAll();
-//        QuanLySanPham QuanLySanPham = new QuanLySanPham();
-//        trangNen.setLayout(this.getLayout());
-//        trangNen.add(QuanLySanPham);
-//        trangNen.revalidate();
-    }//GEN-LAST:event_jPanel6MouseClicked
+        trangNen.removeAll();
+        QuanLySanPham QuanLySanPham = new QuanLySanPham();
+        trangNen.setLayout(this.getLayout());
+        trangNen.add(QuanLySanPham);
+        trangNen.revalidate();    }//GEN-LAST:event_jPanel6MouseClicked
 
     private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
         // TODO add your handling code here:
@@ -387,20 +388,20 @@ public class TrangChu_QL extends javax.swing.JFrame {
 
     private void jPanel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel10MouseClicked
         // TODO add your handling code here:        
-//        trangNen.removeAll();
-//        QuanLyBanHang QuanLyBanHang = new QuanLyBanHang();
-//        trangNen.setLayout(this.getLayout());
-//        trangNen.add(QuanLyBanHang);
-//        trangNen.revalidate();
+        trangNen.removeAll();
+        QuanLyBanHang QuanLyBanHang = new QuanLyBanHang(socket);
+        trangNen.setLayout(this.getLayout());
+        trangNen.add(QuanLyBanHang);
+        trangNen.revalidate();
     }//GEN-LAST:event_jPanel10MouseClicked
 
     private void jPanel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel13MouseClicked
         // TODO add your handling code here:
-//        trangNen.removeAll();
-//        QuanLyHoaDon QuanLyHoaDon = new QuanLyHoaDon();
-//        trangNen.setLayout(this.getLayout());
-//        trangNen.add(QuanLyHoaDon);
-//        trangNen.revalidate();
+        trangNen.removeAll();
+        QuanLyHoaDon QuanLyHoaDon = new QuanLyHoaDon(socket);
+        trangNen.setLayout(this.getLayout());
+        trangNen.add(QuanLyHoaDon);
+        trangNen.revalidate();
     }//GEN-LAST:event_jPanel13MouseClicked
 
     private void jPanel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseClicked
@@ -414,11 +415,11 @@ public class TrangChu_QL extends javax.swing.JFrame {
 
     private void jPanel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel11MouseClicked
         // TODO add your handling code here:
-//        trangNen.removeAll();
-//        QuanLyThongKe QuanLyThongKe = new QuanLyThongKe();
-//        trangNen.setLayout(this.getLayout());
-//        trangNen.add(QuanLyThongKe);
-//        trangNen.revalidate();
+        trangNen.removeAll();
+        QuanLyThongKe QuanLyThongKe = new QuanLyThongKe();
+        trangNen.setLayout(this.getLayout());
+        trangNen.add(QuanLyThongKe);
+        trangNen.revalidate();
     }//GEN-LAST:event_jPanel11MouseClicked
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
@@ -435,11 +436,11 @@ public class TrangChu_QL extends javax.swing.JFrame {
 
     private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
         // TODO add your handling code here:
-//        trangNen.removeAll();
-//        QuanLyPhieuNhap QuanLyPhieuNhap = new QuanLyPhieuNhap();
-//        trangNen.setLayout(this.getLayout());
-//        trangNen.add(QuanLyPhieuNhap);
-//        trangNen.revalidate();
+        trangNen.removeAll();
+        QuanLyPhieuNhap QuanLyPhieuNhap = new QuanLyPhieuNhap();
+        trangNen.setLayout(this.getLayout());
+        trangNen.add(QuanLyPhieuNhap);
+        trangNen.revalidate();
     }//GEN-LAST:event_jPanel7MouseClicked
 
     private void setupKeyboardShortcuts_TrangChuQL() {
@@ -501,65 +502,65 @@ public class TrangChu_QL extends javax.swing.JFrame {
 
     private void handleF2Shortcut() {
         // TODO: Add handling code for F2 shortcut
-//        trangNen.removeAll();
-//        QuanLyNhanVien QuanLyNhanVien = new QuanLyNhanVien();
-//        trangNen.add(QuanLyNhanVien);
-//        setLocationRelativeTo(null);
-//        trangNen.revalidate();
+        trangNen.removeAll();
+        QuanLyNhanVien QuanLyNhanVien = new QuanLyNhanVien(socket);
+        trangNen.add(QuanLyNhanVien);
+        setLocationRelativeTo(null);
+        trangNen.revalidate();
     }
 
     private void handleF3Shortcut() {
         // TODO: Add handling code for F2 shortcut
-//        trangNen.removeAll();
-//        QuanLySanPham QuanLySanPham = new QuanLySanPham();
-//        trangNen.add(QuanLySanPham);
-//        setLocationRelativeTo(null);
-//        trangNen.revalidate();
+        trangNen.removeAll();
+        QuanLySanPham QuanLySanPham = new QuanLySanPham();
+        trangNen.add(QuanLySanPham);
+        setLocationRelativeTo(null);
+        trangNen.revalidate();
     }
 
     private void handleF4Shortcut() {
         // TODO: Add handling code for F2 shortcut
-//        trangNen.removeAll();
-//        QuanLyPhieuNhap QuanLyPhieuNhap = new QuanLyPhieuNhap();
-//        trangNen.add(QuanLyPhieuNhap);
-//        setLocationRelativeTo(null);
-//        trangNen.revalidate();
+        trangNen.removeAll();
+        QuanLyPhieuNhap QuanLyPhieuNhap = new QuanLyPhieuNhap();
+        trangNen.add(QuanLyPhieuNhap);
+        setLocationRelativeTo(null);
+        trangNen.revalidate();
     }
 
     private void handleF5Shortcut() {
         // TODO: Add handling code for F2 shortcut
-//        trangNen.removeAll();
-//        QuanLyHoaDon QuanLyHoaDon = new QuanLyHoaDon();
-//        trangNen.add(QuanLyHoaDon);
-//        setLocationRelativeTo(null);
-//        trangNen.revalidate();
+        trangNen.removeAll();
+        QuanLyHoaDon QuanLyHoaDon = new QuanLyHoaDon(socket);
+        trangNen.add(QuanLyHoaDon);
+        setLocationRelativeTo(null);
+        trangNen.revalidate();
     }
 
     private void handleF6Shortcut() {
         // TODO: Add handling code for F2 shortcut
-//        trangNen.removeAll();
-//        QuanLyKhachHang QuanLyKhachHang = new QuanLyKhachHang();
-//        trangNen.add(QuanLyKhachHang);
-//        setLocationRelativeTo(null);
-//        trangNen.revalidate();
+        trangNen.removeAll();
+        QuanLyKhachHang QuanLyKhachHang = new QuanLyKhachHang(socket);
+        trangNen.add(QuanLyKhachHang);
+        setLocationRelativeTo(null);
+        trangNen.revalidate();
     }
 
     private void handleF7Shortcut() {
         // TODO: Add handling code for F2 shortcut
-//        trangNen.removeAll();
-//        QuanLyNhaCungCap QuanLyNhaCungCap = new QuanLyNhaCungCap();
-//        trangNen.add(QuanLyNhaCungCap);
-//        setLocationRelativeTo(null);
-//        trangNen.revalidate();
+        trangNen.removeAll();
+        QuanLyNhaCungCap QuanLyNhaCungCap = new QuanLyNhaCungCap(socket);
+        trangNen.add(QuanLyNhaCungCap);
+        setLocationRelativeTo(null);
+        trangNen.revalidate();
     }
 
     private void handleF8Shortcut() {
         // TODO: Add handling code for F2 shortcut
-//        trangNen.removeAll();
-//        QuanLyThongKe QuanLyThongKe = new QuanLyThongKe();
-//        trangNen.add(QuanLyThongKe);
-//        setLocationRelativeTo(null);
-//        trangNen.revalidate();
+        trangNen.removeAll();
+        QuanLyThongKe QuanLyThongKe = new QuanLyThongKe();
+        trangNen.add(QuanLyThongKe);
+        setLocationRelativeTo(null);
+        trangNen.revalidate();
     }
     /**
      * @param args the command line arguments
