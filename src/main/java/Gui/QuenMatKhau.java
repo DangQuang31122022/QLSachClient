@@ -278,7 +278,7 @@ public class QuenMatKhau extends javax.swing.JFrame {
             System.out.println("otp nhap da dung");
             JOptionPane.showMessageDialog(null, "Vui lòng thay đổi mật khẩu mới!!!", "Thông báo",
                     JOptionPane.INFORMATION_MESSAGE);
-            //String taiKhoan = txt_taikhoan.getText();
+//            String taiKhoan = txt_taikhoan.getText();
             jButton2.setVisible(true);
             jLabel3.setVisible(true);
             jLabel4.setVisible(true);
