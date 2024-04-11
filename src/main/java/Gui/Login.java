@@ -31,7 +31,7 @@ public class Login extends javax.swing.JFrame {
     private Socket socket;
 //    private LoginDao LoginDao;
 //    private TaiKhoanDAO TaiKhoanDAO;
-    public static String tenTaiKhoan = "NV001";
+    public static String tenTaiKhoan = null;
 
     public Login(Socket socket) {
         initComponents();
