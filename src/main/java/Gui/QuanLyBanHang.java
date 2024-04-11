@@ -288,7 +288,7 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 		jMenuItem2.setText("jMenuItem2");
 
 		setBackground(new java.awt.Color(255, 255, 255));
-		setPreferredSize(new Dimension(500, 400));
+		setPreferredSize(new Dimension(1290, 650));
 		setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
 		jLabelMaHD.setText("MÃ HÓA ĐƠN:");

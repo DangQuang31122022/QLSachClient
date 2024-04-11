@@ -25,6 +25,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
@@ -65,6 +66,7 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 	DefaultTableModel dtm = null;
 	private Socket socket;
 	ObjectInputStream in;
+	ObjectOutputStream outS;
 	PrintWriter out;
 	public static File fontFile = new File("src/main/java/Font/vuArial.ttf");
 	int xacNhan;
@@ -74,6 +76,7 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 		try {
 			in = new ObjectInputStream(socket.getInputStream());
 			out = new PrintWriter(socket.getOutputStream(), true);
+			outS = new ObjectOutputStream(socket.getOutputStream());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

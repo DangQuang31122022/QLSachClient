@@ -371,7 +371,7 @@ public class TrangChu_NV extends javax.swing.JFrame {
     private void handleF3Shortcut() {
         // TODO: Add handling code for F2 shortcut
         trangNen.removeAll();
-        QuanLyBanHang QuanLyBanHang = new QuanLyBanHang();
+        QuanLyBanHang QuanLyBanHang = new QuanLyBanHang(socket);
         trangNen.add(QuanLyBanHang);
         setLocationRelativeTo(null);
         trangNen.revalidate();
@@ -380,7 +380,7 @@ public class TrangChu_NV extends javax.swing.JFrame {
     private void handleF4Shortcut() {
         // TODO: Add handling code for F2 shortcut
         trangNen.removeAll();
-        QuanLyHoaDon QuanLyHoaDon = new QuanLyHoaDon();
+        QuanLyHoaDon QuanLyHoaDon = new QuanLyHoaDon(socket);
         trangNen.add(QuanLyHoaDon);
         setLocationRelativeTo(null);
         trangNen.revalidate();
