@@ -206,7 +206,7 @@ public class Login extends javax.swing.JFrame {
 
                 Scanner sc = new Scanner(socket.getInputStream());
                 String jsonRespone = sc.nextLine();
-
+                jsonRespone = jsonRespone.replaceAll("[^\\x20-\\x7e]", "");
                 JsonObject jsonObject = new JsonParser().parse(jsonRespone).getAsJsonObject();
                 boolean login = jsonObject.get("login").getAsBoolean();
 
