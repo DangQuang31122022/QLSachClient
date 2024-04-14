@@ -4,6 +4,10 @@
  */
 package Gui;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.InstanceCreator;
+import com.google.gson.reflect.TypeToken;
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -35,6 +39,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
+import java.lang.reflect.Type;
 import java.net.Socket;
 import java.sql.Date;
 import java.text.NumberFormat;
@@ -43,6 +48,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.Icon;
@@ -60,9 +66,8 @@ import java.awt.Dimension;
 public class QuanLyBanHang extends javax.swing.JPanel {
 
 	private Socket socket;
-	ObjectInputStream in;
 	PrintWriter out;
-	ObjectOutputStream outS;
+	Scanner sc;
 	public static File fontFile = new File("src/main/java/Font/vuArial.ttf");
 	int xacNhan;
 	double tongTien = 0;
@@ -73,9 +78,8 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 	public QuanLyBanHang(Socket socket) {
 		this.socket = socket;
 		try {
-			in = new ObjectInputStream(socket.getInputStream());
 			out = new PrintWriter(socket.getOutputStream(), true);
-			outS = new ObjectOutputStream(socket.getOutputStream());
+			sc = new Scanner(socket.getInputStream());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -83,13 +87,16 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 		initComponents();
 		jButtonSach.setSelected(true);
 		try {
-			out.println("QLBanHang");
+			out.println("QLBH");
+			out.println("getBasic");
 
-			String txtFieldMaHD = (String) in.readObject();
+			String txtFieldMaHD = sc.nextLine();
 			jTextFieldMaHD.setText(txtFieldMaHD);
 
 			out.println(Login.tenTaiKhoan);
-			NhanVien nv = (NhanVien) in.readObject();
+			String object = sc.nextLine();
+			NhanVien nv = new Gson().fromJson(object, new TypeToken<NhanVien>() {
+			}.getType());
 
 			jTextFieldMaNV.setText(nv.getMaNhanVien());
 			jTextFieldTenNV.setText(nv.getTenNhanVien());
@@ -114,13 +121,23 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 	public void loadTblSach() {
 		try {
 			clearTableSanPham();
-			out.println("loadTblSachQLBH");
+			out.println("QLBH");
+			out.println("getAllSach");
 			DefaultTableModel dtm = (DefaultTableModel) jTable_DSSPHienCo.getModel();
 
-			List<SanPham> listSanPham = (List<SanPham>) in.readObject();
+			String listObject = sc.nextLine();
+			InstanceCreator<SanPham> sachInstanceCreator = new InstanceCreator<SanPham>() {
+				@Override
+				public SanPham createInstance(Type type) {
+					return new Sach();
+				}
+			};
+			Gson gsonSach = new GsonBuilder().registerTypeAdapter(SanPham.class, sachInstanceCreator).create();
+
+			List<SanPham> listSanPham = gsonSach.fromJson(listObject, new TypeToken<List<SanPham>>() {
+			}.getType());
 			for (SanPham sanPham : listSanPham) {
 				if (sanPham instanceof Sach) {
-					Sach sach = (Sach) sanPham;
 					Object[] rowData = { sanPham.getMaSP(), sanPham.getTenSP(), sanPham.getDonGiaBan(),
 							sanPham.getSoLuongTK() };
 					dtm.addRow(rowData);
@@ -137,9 +154,21 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 	public void loadTblVPP() {
 		try {
 			clearTableSanPham();
-			out.println("loadTblVPPQLBH");
+			out.println("QLBH");
+			out.println("getAllVPP");
 			DefaultTableModel dtm = (DefaultTableModel) jTable_DSSPHienCo.getModel();
-			List<SanPham> listSanPham = (List<SanPham>) in.readObject();
+
+			String listObject = sc.nextLine();
+			InstanceCreator<SanPham> vppInstanceCreator = new InstanceCreator<SanPham>() {
+				@Override
+				public SanPham createInstance(Type type) {
+					return new VPP();
+				}
+			};
+			Gson gsonVPP = new GsonBuilder().registerTypeAdapter(SanPham.class, vppInstanceCreator).create();
+
+			List<SanPham> listSanPham = gsonVPP.fromJson(listObject, new TypeToken<List<SanPham>>() {
+			}.getType());
 			for (SanPham sanPham : listSanPham) {
 				if (sanPham instanceof VPP) {
 					Object[] rowData = { sanPham.getMaSP(), sanPham.getTenSP(), sanPham.getDonGiaBan(),
@@ -579,18 +608,58 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 	private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnThemActionPerformed
 		try {
 			if (kiemTraHopLe()) {
-				out.println("btnThemQLBH");
-
+				out.println("QLBH");
+				out.println("getSP");
 				int soLuong = Integer.parseInt(jTextFieldSoLuong.getText());
 				int row = jTable_DSSPHienCo.getSelectedRow();
 
 				out.println(jTable_DSSPHienCo.getValueAt(row, 0).toString());
-				SanPham sp = (SanPham) in.readObject();
 
+				SanPham sp = null;
+				if (jTable_DSSPHienCo.getValueAt(row, 0).toString().startsWith("S")) {
+					String objectSach = sc.nextLine();
+					InstanceCreator<SanPham> sachInstanceCreator = new InstanceCreator<SanPham>() {
+						@Override
+						public SanPham createInstance(Type type) {
+							return new Sach();
+						}
+					};
+					Gson gsonSach = new GsonBuilder().registerTypeAdapter(SanPham.class, sachInstanceCreator).create();
+					sp = gsonSach.fromJson(objectSach, new TypeToken<SanPham>() {
+					}.getType());
+				} else {
+					String objectVPP = sc.nextLine();
+					InstanceCreator<SanPham> vppInstanceCreator = new InstanceCreator<SanPham>() {
+						@Override
+						public SanPham createInstance(Type type) {
+							return new VPP();
+						}
+					};
+					Gson gsonVPP = new GsonBuilder().registerTypeAdapter(SanPham.class, vppInstanceCreator).create();
+					sp = gsonVPP.fromJson(objectVPP, new TypeToken<SanPham>() {
+					}.getType());
+				}
 				DefaultTableModel dtmBan = (DefaultTableModel) jTable_DSSPBan.getModel();
 				int tang = 0;
 				int check = 0;
 				int checkSL = 0;
+				for (int i = 0; i < dtmBan.getRowCount(); i++) {
+					if (sp.getMaSP().equals(jTable_DSSPBan.getValueAt(i, 0).toString())) {
+						int slhc = Integer.parseInt(dtmBan.getValueAt(i, 4).toString());
+						tongsoluong = slhc + soLuong;
+						if (tongsoluong > sp.getSoLuongTK()) {
+							JOptionPane.showMessageDialog(null,
+									"Số lượng bán phải nhỏ hơn số lượng hiện có trong kho ở sản phẩm " + sp.getMaSP());
+							checkSL = 1;
+						} else {
+							check = i;
+							tang = 1;
+							break;
+						}
+
+					}
+				}
+
 				for (int i = 0; i < dtmBan.getRowCount(); i++) {
 					if (sp.getMaSP().equals(jTable_DSSPBan.getValueAt(i, 0).toString())) {
 						int slhc = Integer.parseInt(dtmBan.getValueAt(i, 4).toString());
@@ -647,7 +716,7 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 	private void btnLamMoiActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnLamMoiActionPerformed
 		// TODO add your handling code here:
 		lamMoi();
-		
+
 	}// GEN-LAST:event_btnLamMoiActionPerformed
 
 	private void jButtonVPPActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButtonVPPActionPerformed
@@ -659,7 +728,8 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 		// TODO add your handling code here:
 		try {
 			if (kiemTraHopLeThanhToan()) {
-				out.println("btnThanhToanQLBH");
+				out.println("QLBH");
+				out.println("thanhToan");
 
 				DefaultTableModel dtmDSSPBan = (DefaultTableModel) jTable_DSSPBan.getModel();
 				String maHD = jTextFieldMaHD.getText();
@@ -670,40 +740,93 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 				Date ngayLap = Date.valueOf(day);
 
 				out.println(jTextFieldMaNV.getText());
-				NhanVien nv = (NhanVien) in.readObject();
+				String nvObject = sc.nextLine();
+				NhanVien nv = new Gson().fromJson(nvObject, new TypeToken<NhanVien>() {
+				}.getType());
 
 				out.println(jTextFieldSoDT.getText());
-				KhachHang kh = (KhachHang) in.readObject();
+				String khObject = sc.nextLine();
+				KhachHang kh = new Gson().fromJson(khObject, new TypeToken<KhachHang>() {
+				}.getType());
 
 				HoaDon hd = new HoaDon(maHD, ngayLap, nv, kh);
-				outS.writeObject(hd);
+				String responseHD = new Gson().toJson(hd);
+				try {
+					PrintWriter writer = new PrintWriter(socket.getOutputStream());
+					writer.println(responseHD);
+					writer.flush();
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+				}
 
-				String rsAddHD = (String) in.readObject();
+				String rsAddHD = sc.nextLine();
 				if (rsAddHD.equals("false")) {
 					JOptionPane.showMessageDialog(null, "Đã có lỗi");
 					return;
 				}
 
 				int rowJTable_DSSPBan = jTable_DSSPBan.getRowCount();
-				outS.writeObject(rowJTable_DSSPBan);
+				out.println(rowJTable_DSSPBan);
 
 				for (int i = 0; i < jTable_DSSPBan.getRowCount(); i++) {
 					String maSP = dtmDSSPBan.getValueAt(i, 0).toString();
 					out.println(maSP);
-					SanPham sp = (SanPham) in.readObject();
 
+					String spObject = sc.nextLine();
+
+					out.println(maSP);
+					SanPham sp = null;
+					if (maSP.startsWith("S")) {
+						InstanceCreator<SanPham> sachInstanceCreator = new InstanceCreator<SanPham>() {
+							@Override
+							public SanPham createInstance(Type type) {
+								return new Sach();
+							}
+						};
+						Gson gsonSach = new GsonBuilder().registerTypeAdapter(SanPham.class, sachInstanceCreator)
+								.create();
+						sp = gsonSach.fromJson(spObject, new TypeToken<SanPham>() {
+						}.getType());
+					} else {
+						InstanceCreator<SanPham> vppInstanceCreator = new InstanceCreator<SanPham>() {
+							@Override
+							public SanPham createInstance(Type type) {
+								return new VPP();
+							}
+						};
+						Gson gsonVPP = new GsonBuilder().registerTypeAdapter(SanPham.class, vppInstanceCreator)
+								.create();
+						sp = gsonVPP.fromJson(spObject, new TypeToken<SanPham>() {
+						}.getType());
+					}
 					int soLuong = Integer.parseInt(dtmDSSPBan.getValueAt(i, 4).toString());
-					sp.setSoLuongTK(sp.getSoLuongTK() - soLuong);
+
 					ChiTietHoaDon cthd = new ChiTietHoaDon(sp, hd, soLuong);
-					outS.writeObject(cthd);
-					String rsAddCTHD = (String) in.readObject();
-					if (rsAddHD.equals("false")) {
+					String responseCTHD = new Gson().toJson(cthd);
+					try {
+						PrintWriter writer = new PrintWriter(socket.getOutputStream());
+						writer.println(responseCTHD);
+						writer.flush();
+					} catch (IOException e) {
+						throw new RuntimeException(e);
+					}
+					String rsAddCTHD = sc.nextLine();
+					if (rsAddCTHD.equals("false")) {
 						JOptionPane.showMessageDialog(null, "Đã có lỗi");
 						return;
 					}
 
-					outS.writeObject(sp);
-					String rsUpdateSP = (String) in.readObject();
+					sp.setSoLuongTK(sp.getSoLuongTK() - soLuong);
+					out.println(maSP);
+					String responseSP = new Gson().toJson(sp);
+					try {
+						PrintWriter writer = new PrintWriter(socket.getOutputStream());
+						writer.println(responseSP);
+						writer.flush();
+					} catch (IOException e) {
+						throw new RuntimeException(e);
+					}
+					String rsUpdateSP = sc.nextLine();
 					if (rsAddHD.equals("false")) {
 						JOptionPane.showMessageDialog(null, "Đã có lỗi");
 						return;
@@ -712,7 +835,16 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 				JOptionPane.showMessageDialog(null, "Thanh toán thành công");
 
 				out.println(maHD);
-				List<ChiTietHoaDon> listCTHD = (List<ChiTietHoaDon>) in.readObject();
+				String cthdObject = sc.nextLine();
+				InstanceCreator<SanPham> sachInstanceCreator = new InstanceCreator<SanPham>() {
+					@Override
+					public SanPham createInstance(Type type) {
+						return new Sach();
+					}
+				};
+				Gson gsonSach = new GsonBuilder().registerTypeAdapter(SanPham.class, sachInstanceCreator).create();
+				List<ChiTietHoaDon> listCTHD = gsonSach.fromJson(cthdObject, new TypeToken<List<ChiTietHoaDon>>() {
+				}.getType());
 				try {
 					xacNhan = JOptionPane.showConfirmDialog(this, "Bạn có muốn xem file", "Thông báo",
 							JOptionPane.YES_NO_OPTION);
@@ -723,7 +855,7 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 				clearTableSanPhamBan();
 				lamMoi();
 
-				String txtFieldMaHD = (String) in.readObject();
+				String txtFieldMaHD = sc.nextLine();
 				jTextFieldMaHD.setText(txtFieldMaHD);
 
 				tongTien = 0;
@@ -733,26 +865,37 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 			e.printStackTrace();
 		}
 		out.flush();
-		out.flush();
 	}// GEN-LAST:event_btnThanhToanActionPerformed
 
 	private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnTimKiemActionPerformed
 		// TODO add your handling code here:
 		try {
-		out.println("btnTimKiemQLBH");
-		clearTableSanPham();
-		String timKiem = jTextFieldTimKiem.getText().toString();
-		DefaultTableModel dtm = (DefaultTableModel) jTable_DSSPHienCo.getModel();
-		
-		List<SanPham> listSanPham = (List<SanPham>) in.readObject();
-		for (SanPham sanPham : listSanPham) {
-			if (sanPham.getTenSP().contains(timKiem)) {
-				Object[] rowData = { sanPham.getMaSP(), sanPham.getTenSP(), sanPham.getDonGiaBan(),
-						sanPham.getSoLuongTK() };
-				dtm.addRow(rowData);
+			out.println("QLBH");
+			out.println("getAllSP");
+			clearTableSanPham();
+			String timKiem = jTextFieldTimKiem.getText().toString();
+			DefaultTableModel dtm = (DefaultTableModel) jTable_DSSPHienCo.getModel();
+
+			String listObject = sc.nextLine();
+			InstanceCreator<SanPham> sachInstanceCreator = new InstanceCreator<SanPham>() {
+				@Override
+				public SanPham createInstance(Type type) {
+					return new Sach();
+				}
+			};
+			Gson gsonSach = new GsonBuilder().registerTypeAdapter(SanPham.class, sachInstanceCreator).create();
+
+			List<SanPham> listSanPham = gsonSach.fromJson(listObject, new TypeToken<List<SanPham>>() {
+			}.getType());
+
+			for (SanPham sanPham : listSanPham) {
+				if (sanPham.getTenSP().contains(timKiem)) {
+					Object[] rowData = { sanPham.getMaSP(), sanPham.getTenSP(), sanPham.getDonGiaBan(),
+							sanPham.getSoLuongTK() };
+					dtm.addRow(rowData);
+				}
 			}
-		}
-		}catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		out.flush();
@@ -766,11 +909,23 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 	private void jTable_DSSPHienCoMousePressed(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jTable_DSSPHienCoMousePressed
 		// TODO add your handling code here:
 		try {
-			out.println("loadImgQLBH");
+			out.println("QLBH");
+			out.println("getSP");
 			int row = jTable_DSSPHienCo.getSelectedRow();
 			DefaultTableModel dtm = (DefaultTableModel) jTable_DSSPHienCo.getModel();
 			out.println(dtm.getValueAt(row, 0).toString());
-			SanPham sanPham = (SanPham) in.readObject();
+
+			String object = sc.nextLine();
+			InstanceCreator<SanPham> sachInstanceCreator = new InstanceCreator<SanPham>() {
+				@Override
+				public SanPham createInstance(Type type) {
+					return new Sach();
+				}
+			};
+			Gson gsonSach = new GsonBuilder().registerTypeAdapter(SanPham.class, sachInstanceCreator).create();
+
+			SanPham sanPham = gsonSach.fromJson(object, new TypeToken<SanPham>() {
+			}.getType());
 			File file = new File("");
 			String path = file.getAbsolutePath();
 
@@ -784,7 +939,8 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 	private void btnTimSDTActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnTimSDTActionPerformed
 		// TODO add your handling code here:
 		try {
-			out.println("btnTimBySDTQLBH");
+			out.println("QLBH");
+			out.println("getKHBySDT");
 			String sdt = jTextFieldSoDT.getText().toString();
 			Pattern pattern = Pattern.compile("^[0-9\\-\\+]{9,15}$");
 			Matcher matcher = pattern.matcher(sdt);
@@ -792,7 +948,9 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 			if (matcher.matches()) {
 				try {
 					out.println(sdt);
-					KhachHang kh = (KhachHang) in.readObject();
+					String object = sc.nextLine();
+					KhachHang kh = new Gson().fromJson(object, new TypeToken<KhachHang>() {
+					}.getType());
 					jTextFieldMaKH.setText(kh.getMaKhachHang());
 					jTextFieldTenKH.setText(kh.getTenKhachHang());
 					jTextFieldEmail.setText(kh.getEmail());
@@ -869,14 +1027,25 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 	private void btnXacNhanActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnXacNhanActionPerformed
 		// TODO add your handling code here:
 		try {
-			out.println("btnXacNhanQLBH");
+			out.println("QLBH");
+			out.println("getAllSP");
 			int check = 0;
 			int row = jTable_DSSPBan.getSelectedRow();
 			DefaultTableModel dtmBan = (DefaultTableModel) jTable_DSSPBan.getModel();
 			if (row == -1) {
 				JOptionPane.showMessageDialog(null, "Vui lòng chọn sản phẩm cần thay đổi");
 			} else {
-				List<SanPham> listSanPham = (List<SanPham>) in.readObject();
+				String listObject = sc.nextLine();
+				InstanceCreator<SanPham> sachInstanceCreator = new InstanceCreator<SanPham>() {
+					@Override
+					public SanPham createInstance(Type type) {
+						return new Sach();
+					}
+				};
+				Gson gson = new GsonBuilder().registerTypeAdapter(SanPham.class, sachInstanceCreator).create();
+				List<SanPham> listSanPham = gson.fromJson(listObject, new TypeToken<List<SanPham>>() {
+				}.getType());
+
 				int soLuong = Integer.parseInt(jTextFieldSoLuongBan.getText());
 				if (soLuong < 1) {
 					int option = JOptionPane.showConfirmDialog(null,

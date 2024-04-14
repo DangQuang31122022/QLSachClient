@@ -5,11 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69f3e715-a997-4f17-b36a-63d8c75d1108" name="Changes" comment="Adjust the logic for the login section on the client">
-      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyBanHang.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyHoaDon.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/ForgotPasswordLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/ForgotPasswordLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/LoginLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/LoginLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/entity/Sach.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/entity/Sach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/entity/SanPham.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/entity/SanPham.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/entity/TaiKhoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/entity/TaiKhoan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/entity/VPP.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/entity/VPP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/server/ProgressRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/server/ProgressRunnable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/QuenMatKhau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui/QuenMatKhau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/entityLib.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/entityLib.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/TrangChu_NV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui/TrangChu_NV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/TrangChu_QL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui/TrangChu_QL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +36,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,7 +65,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "quang",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/17d/phantan/doan/QLSachClient/lib/xmlbeans-5.1.1.jar",
+    "last_opened_file_path": "D:/DocLocal/PhanTan/doan/QLSachClient/src/main/java/Gui",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,6 +80,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DocLocal\PhanTan\doan\QLSachClient\src\main\java\Gui" />
       <recent name="D:\17d\phantan\doan\QLSachClient\src\main\java\Gui" />
       <recent name="D:\17d\phantan\doan\QLSachClient" />
       <recent name="D:\17d\phantan\doan\QLSachClient\src\main\java" />
@@ -107,7 +123,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -127,6 +144,12 @@
       <workItem from="1712204322785" duration="5034000" />
       <workItem from="1712233896011" duration="9000000" />
       <workItem from="1712278090120" duration="17210000" />
+      <workItem from="1712748051861" duration="2798000" />
+      <workItem from="1712813337704" duration="4071000" />
+      <workItem from="1712818579689" duration="67000" />
+      <workItem from="1712838198664" duration="10465000" />
+      <workItem from="1712882294560" duration="2232000" />
+      <workItem from="1712905837058" duration="6564000" />
     </task>
     <task id="LOCAL-00001" summary="Socket forgot password">
       <option name="closed" value="true" />
@@ -154,16 +177,5 @@
     <MESSAGE value="Socket forgot password" />
     <MESSAGE value="Adjust the logic for the login section on the client" />
     <option name="LAST_COMMIT_MESSAGE" value="Adjust the logic for the login section on the client" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Gui/QuenMatKhau.java</url>
-          <line>246</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

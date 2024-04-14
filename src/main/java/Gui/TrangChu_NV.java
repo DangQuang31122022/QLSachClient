@@ -6,7 +6,6 @@ package Gui;
 
 import java.awt.event.ActionEvent;
 import java.net.Socket;
-
 import javax.swing.AbstractAction;
 import javax.swing.ActionMap;
 import javax.swing.InputMap;
@@ -19,14 +18,13 @@ import javax.swing.KeyStroke;
  * @author LENOVO
  */
 public class TrangChu_NV extends javax.swing.JFrame {
-	
-	private Socket socket;
+    private Socket socket;
     /**
      * Creates new form TrangChu
      */
     public TrangChu_NV(Socket socket) {
-    	this.socket = socket;
         initComponents();
+        this.socket = socket;
         trangNen.removeAll();
         TrangNen tn = new TrangNen();
         trangNen.setLayout(this.getLayout());
@@ -47,30 +45,30 @@ public class TrangChu_NV extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        jPanel1 = new JPanel();
+        jPanel3 = new JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
+        jPanel6 = new JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jPanel10 = new javax.swing.JPanel();
+        jPanel10 = new JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        jPanel4 = new JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
+        jPanel8 = new JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jPanel13 = new javax.swing.JPanel();
+        jPanel13 = new JPanel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        jPanel11 = new javax.swing.JPanel();
+        jPanel11 = new JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        trangNen = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        trangNen = new JPanel();
+        jPanel2 = new JPanel();
         jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -79,7 +77,7 @@ public class TrangChu_NV extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/hinh-nen.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("src/main/java/Img/hinh-nen.jpg")); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -104,7 +102,7 @@ public class TrangChu_NV extends javax.swing.JFrame {
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/book.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon("src/main/java/Img/book.png")); // NOI18N
         jLabel4.setText("Quản lý sản phẩm");
         jPanel6.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 160, 30));
 
@@ -125,7 +123,7 @@ public class TrangChu_NV extends javax.swing.JFrame {
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/BanHang_20px.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon("src/main/java/Img/BanHang_20px.png")); // NOI18N
         jLabel8.setText("Quản lý bán hàng");
         jPanel10.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 30));
 
@@ -145,7 +143,7 @@ public class TrangChu_NV extends javax.swing.JFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/home2.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("src/main/java/Img/home2.png")); // NOI18N
         jLabel3.setText("Trang chủ");
         jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 30));
 
@@ -158,7 +156,7 @@ public class TrangChu_NV extends javax.swing.JFrame {
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Login-icon-16.png"))); // NOI18N
+        jLabel18.setIcon(new javax.swing.ImageIcon("src/main/java/Img/Login-icon-16.png")); // NOI18N
         jLabel18.setText(" Đăng xuất");
         jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -177,7 +175,7 @@ public class TrangChu_NV extends javax.swing.JFrame {
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/khach-hang.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon("src/main/java/Img/khach-hang.png")); // NOI18N
         jLabel6.setText("Quản lý khách hàng");
         jPanel8.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 30));
 
@@ -198,7 +196,7 @@ public class TrangChu_NV extends javax.swing.JFrame {
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/bill.png"))); // NOI18N
+        jLabel20.setIcon(new javax.swing.ImageIcon("src/main/java/Img/bill.png")); // NOI18N
         jLabel20.setText("Quản lý hóa đơn");
         jPanel13.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 30));
 
@@ -219,7 +217,7 @@ public class TrangChu_NV extends javax.swing.JFrame {
         jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/thong-ke.png"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon("src/main/java/Img/thong-ke.png")); // NOI18N
         jLabel9.setText("Quản lý thống kê");
         jPanel11.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 30));
 
@@ -259,16 +257,17 @@ public class TrangChu_NV extends javax.swing.JFrame {
 
     private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
         // TODO add your handling code here:
-        trangNen.removeAll();
-        QuanLySanPham QuanLySanPham = new QuanLySanPham();
-        trangNen.setLayout(this.getLayout());
-        trangNen.add(QuanLySanPham);
-        trangNen.revalidate();    }//GEN-LAST:event_jPanel6MouseClicked
+//        trangNen.removeAll();
+//        QuanLySanPham QuanLySanPham = new QuanLySanPham();
+//        trangNen.setLayout(this.getLayout());
+//        trangNen.add(QuanLySanPham);
+//        trangNen.revalidate();
+    }//GEN-LAST:event_jPanel6MouseClicked
 
     private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
         // TODO add your handling code here:
         trangNen.removeAll();
-        QuanLyKhachHang QuanLyKhachHang = new QuanLyKhachHang();
+        QuanLyKhachHang QuanLyKhachHang = new QuanLyKhachHang(socket);
         trangNen.setLayout(this.getLayout());
         trangNen.add(QuanLyKhachHang);
         trangNen.revalidate();
@@ -294,7 +293,7 @@ public class TrangChu_NV extends javax.swing.JFrame {
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         // TODO add your handling code here:
-        Login lg = new Login();
+        Login lg = new Login(socket);
         lg.setVisible(true);
         lg.setLocationRelativeTo(null);
         dispose();
@@ -302,11 +301,11 @@ public class TrangChu_NV extends javax.swing.JFrame {
 
     private void jPanel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel11MouseClicked
         // TODO add your handling code here:
-        trangNen.removeAll();
-        QuanLyThongKe QuanLyThongKe = new QuanLyThongKe();
-        trangNen.setLayout(this.getLayout());
-        trangNen.add(QuanLyThongKe);
-        trangNen.revalidate();
+//        trangNen.removeAll();
+//        QuanLyThongKe QuanLyThongKe = new QuanLyThongKe();
+//        trangNen.setLayout(this.getLayout());
+//        trangNen.add(QuanLyThongKe);
+//        trangNen.revalidate();
     }//GEN-LAST:event_jPanel11MouseClicked
 
      private void setupKeyboardShortcuts_TrangChuQL() {
@@ -363,11 +362,11 @@ public class TrangChu_NV extends javax.swing.JFrame {
 
     private void handleF2Shortcut() {
         // TODO: Add handling code for F2 shortcut
-        trangNen.removeAll();
-        QuanLySanPham QuanLySanPham = new QuanLySanPham();
-        trangNen.add(QuanLySanPham);
-        setLocationRelativeTo(null);
-        trangNen.revalidate();
+//        trangNen.removeAll();
+//        QuanLySanPham QuanLySanPham = new QuanLySanPham();
+//        trangNen.add(QuanLySanPham);
+//        setLocationRelativeTo(null);
+//        trangNen.revalidate();
     }
 
     private void handleF3Shortcut() {
@@ -391,7 +390,7 @@ public class TrangChu_NV extends javax.swing.JFrame {
     private void handleF5Shortcut() {
         // TODO: Add handling code for F2 shortcut
         trangNen.removeAll();
-        QuanLyKhachHang QuanLyKhachHang = new QuanLyKhachHang();
+        QuanLyKhachHang QuanLyKhachHang = new QuanLyKhachHang(socket);
         trangNen.add(QuanLyKhachHang);
         setLocationRelativeTo(null);
         trangNen.revalidate();
@@ -399,11 +398,11 @@ public class TrangChu_NV extends javax.swing.JFrame {
 
     private void handleF6Shortcut() {
         // TODO: Add handling code for F2 shortcut
-        trangNen.removeAll();
-        QuanLyThongKe QuanLyThongKe = new QuanLyThongKe();
-        trangNen.add(QuanLyThongKe);
-        setLocationRelativeTo(null);
-        trangNen.revalidate();
+//        trangNen.removeAll();
+//        QuanLyThongKe QuanLyThongKe = new QuanLyThongKe();
+//        trangNen.add(QuanLyThongKe);
+//        setLocationRelativeTo(null);
+//        trangNen.revalidate();
     }
     /**
      * @param args the command line arguments
@@ -461,15 +460,15 @@ public class TrangChu_NV extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel trangNen;
+    private JPanel jPanel1;
+    private JPanel jPanel10;
+    private JPanel jPanel11;
+    private JPanel jPanel13;
+    private JPanel jPanel2;
+    private JPanel jPanel3;
+    private JPanel jPanel4;
+    private JPanel jPanel6;
+    private JPanel jPanel8;
+    private JPanel trangNen;
     // End of variables declaration//GEN-END:variables
 }

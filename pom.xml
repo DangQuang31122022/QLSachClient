@@ -76,6 +76,5 @@
 			<version>3.0.0</version> <!-- Adjust version as needed -->
 		</dependency>
 
-
 	</dependencies>
 </project>

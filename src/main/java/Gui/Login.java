@@ -11,7 +11,7 @@ import com.google.gson.JsonParser;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.HashMap;
+//import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 //import java.sql.SQLException;
@@ -31,7 +31,7 @@ public class Login extends javax.swing.JFrame {
     private Socket socket;
 //    private LoginDao LoginDao;
 //    private TaiKhoanDAO TaiKhoanDAO;
-    public static String tenTaiKhoan = "NV001";
+    public static String tenTaiKhoan = null;
 
     public Login(Socket socket) {
         initComponents();
@@ -206,7 +206,7 @@ public class Login extends javax.swing.JFrame {
 
                 Scanner sc = new Scanner(socket.getInputStream());
                 String jsonRespone = sc.nextLine();
-
+                jsonRespone = jsonRespone.replaceAll("[^\\x20-\\x7e]", "");
                 JsonObject jsonObject = new JsonParser().parse(jsonRespone).getAsJsonObject();
                 boolean login = jsonObject.get("login").getAsBoolean();
 

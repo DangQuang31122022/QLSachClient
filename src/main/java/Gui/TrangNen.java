@@ -29,7 +29,7 @@ public class TrangNen extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/trangNen_new.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("src/main/java/Img/trangNen_new.jpg")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

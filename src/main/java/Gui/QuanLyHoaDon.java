@@ -4,6 +4,12 @@
  */
 package Gui;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.InstanceCreator;
+import com.google.gson.TypeAdapter;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -46,17 +52,22 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.lang.*;
+import java.lang.reflect.Type;
 import java.net.Socket;
 
 import entity.ChiTietHoaDon;
 import entity.HoaDon;
+import entity.KhachHang;
 import entity.Sach;
+import entity.SanPham;
+import entity.VPP;
 
 import java.awt.Desktop;
 import java.awt.Font;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
+import java.util.Scanner;
 
 /**
  *
@@ -65,18 +76,16 @@ import java.util.Locale;
 public class QuanLyHoaDon extends javax.swing.JPanel {
 	DefaultTableModel dtm = null;
 	private Socket socket;
-	ObjectInputStream in;
-	ObjectOutputStream outS;
 	PrintWriter out;
+	Scanner sc;
 	public static File fontFile = new File("src/main/java/Font/vuArial.ttf");
 	int xacNhan;
 
 	public QuanLyHoaDon(Socket socket) {
 		this.socket = socket;
 		try {
-			in = new ObjectInputStream(socket.getInputStream());
 			out = new PrintWriter(socket.getOutputStream(), true);
-			outS = new ObjectOutputStream(socket.getOutputStream());
+			sc = new Scanner(socket.getInputStream());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -93,12 +102,17 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 	// load table hóa đơn
 	public void loadTblHoaDon() {
 		clearTableHoaDon();
-		try {
-			out.println("loadTblHoaDon");
-			dtm = (DefaultTableModel) jTable_DanhSachHoaDon.getModel();
+		dtm = (DefaultTableModel) jTable_DanhSachHoaDon.getModel();
 
-			List<HoaDon> dshd = (List<HoaDon>) in.readObject();
-			double[] listTongTien = (double[]) in.readObject();
+		try {
+			out.println("QLHD");
+			out.println("getAll");
+			String listObject = sc.nextLine();
+			List<HoaDon> dshd = new Gson().fromJson(listObject, new TypeToken<List<HoaDon>>() {
+			}.getType());
+			String listObjectTT = sc.nextLine();
+			double[] listTongTien = new Gson().fromJson(listObjectTT, new TypeToken<double[]>() {
+			}.getType());
 			int index = 0;
 			for (HoaDon hoaDon : dshd) {
 				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -111,7 +125,6 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		out.flush();
 	}
 
 	// clear table sản phẩm
@@ -124,39 +137,63 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 	public void loadTblChiTietHoaDon(String id) {
 		clearTableChiTietHoaDon();
 		try {
-			out.println("loadTblChiTietHoaDon");
+			out.println("QLHD");
+			out.println("getCTHD_id");
 			out.println(id);
 			dtm = (DefaultTableModel) jTable_ChiTietHoaDon.getModel();
-			List<ChiTietHoaDon> listCTHD = (List<ChiTietHoaDon>) in.readObject();
-			for (ChiTietHoaDon chiTietHoaDon : listCTHD) {
+
+			String listObjectSach = sc.nextLine();			
+			// Tạo một InstanceCreator mới cho lớp SanPham
+			InstanceCreator<SanPham> sachInstanceCreator = new InstanceCreator<SanPham>() {
+				@Override
+				public SanPham createInstance(Type type) {
+					return new Sach();
+				}
+			};
+			// Đăng ký InstanceCreator cho lớp SanPham khi tạo Gson
+			Gson gsonSach = new GsonBuilder().registerTypeAdapter(SanPham.class, sachInstanceCreator).create();
+			List<ChiTietHoaDon> listCTHDSach = gsonSach.fromJson(listObjectSach, new TypeToken<List<ChiTietHoaDon>>() {
+			}.getType());
+			
+			String listObjectVPP = sc.nextLine();
+			InstanceCreator<SanPham> vppInstanceCreator = new InstanceCreator<SanPham>() {
+				@Override
+				public SanPham createInstance(Type type) {
+					return new VPP();
+				}
+			};
+			Gson gsonVPP = new GsonBuilder().registerTypeAdapter(SanPham.class, vppInstanceCreator).create();
+			List<ChiTietHoaDon> listCTHDVPP = gsonVPP.fromJson(listObjectVPP, new TypeToken<List<ChiTietHoaDon>>() {
+			}.getType());
+			
+			for (ChiTietHoaDon chiTietHoaDon : listCTHDSach) {
 				if (chiTietHoaDon.getSanPham() instanceof Sach) {
 					Object[] rowData = { chiTietHoaDon.getSanPham().getMaSP(), chiTietHoaDon.getSanPham().getTenSP(),
 							"Sách", chiTietHoaDon.getSoLuong(), chiTietHoaDon.getSanPham().getDonGiaBan(),
 							chiTietHoaDon.thanhTien() };
 					dtm.addRow(rowData);
-				} else {
+				} 
+			}
+			for (ChiTietHoaDon chiTietHoaDon : listCTHDVPP) {
+				if (chiTietHoaDon.getSanPham() instanceof VPP) {
 					Object[] rowData = { chiTietHoaDon.getSanPham().getMaSP(), chiTietHoaDon.getSanPham().getTenSP(),
 							"VPP", chiTietHoaDon.getSoLuong(), chiTietHoaDon.getSanPham().getDonGiaBan(),
 							chiTietHoaDon.thanhTien() };
 					dtm.addRow(rowData);
-				}
+				} 
 			}
-		} catch (Exception e) {
+			
+		}catch( Exception e){
 			e.printStackTrace();
 		}
-		out.flush();
 	}
-
-//	public ArrayList<ChiTietHoaDon> getListChiTietHoaDonByHoaDon(String id) {
-//		cthd_DAO = new ChiTietHoaDonDAO();
-//		return cthd_DAO.getCTHDById(id);
-//	}
 
 	/**
 	 * This method is called from within the constructor to initialize the form.
 	 * WARNING: Do NOT modify this code. The content of this method is always
 	 * regenerated by the Form Editor.
 	 */
+	
 	// <editor-fold defaultstate="collapsed" desc="Generated
 	// Code">//GEN-BEGIN:initComponents
 	private void initComponents() {
@@ -389,7 +426,8 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 		clearTableHoaDon();
 		clearTableChiTietHoaDon();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-		out.println("btnTimKiemHD");
+		out.println("QLHD");
+		out.println("btnTimKiem");
 		try {
 			String from = formatter.format(jDateChooserFrom.getDate());
 			out.println(from);
@@ -399,9 +437,12 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 			String key = jTextFieldTimKiem.getText().trim();
 
 			DefaultTableModel dtml = (DefaultTableModel) jTable_DanhSachHoaDon.getModel();
-
-			List<HoaDon> listHoaDon = (List<HoaDon>) in.readObject();
-			double[] listTongTien = (double[]) in.readObject();
+			String listObject = sc.nextLine();
+			List<HoaDon> listHoaDon = new Gson().fromJson(listObject, new TypeToken<List<HoaDon>>() {
+			}.getType());
+			String listObjectTT = sc.nextLine();
+			double[] listTongTien = new Gson().fromJson(listObjectTT, new TypeToken<double[]>() {
+			}.getType());
 			int index = 0;
 			for (HoaDon hoaDon : listHoaDon) {
 				if (hoaDon.getNhanVien().getTenNhanVien().contains(key)
@@ -715,7 +756,8 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 
 	public void xuatFilePDF() {
 		try {
-			out.println("btnXuatChiTietHoaDon");
+			out.println("QLHD");
+			out.println("btnXuatHoaDon");
 			int row = jTable_DanhSachHoaDon.getSelectedRow();
 			if (row == -1) {
 				JOptionPane.showMessageDialog(null, "Vui lòng chọn hoá đơn cần xuất");
@@ -724,9 +766,22 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 			String id = dtm.getValueAt(row, 0).toString();
 			out.println(id);
 
-			HoaDon hd = (HoaDon) in.readObject();
-			double tongTien = in.readDouble();
-			List<ChiTietHoaDon> listCTHD = (List<ChiTietHoaDon>) in.readObject();
+			String object = sc.nextLine();
+			HoaDon hd = new Gson().fromJson(object, new TypeToken<HoaDon>() {
+			}.getType());
+
+			InstanceCreator<SanPham> sanPhamInstanceCreator = new InstanceCreator<SanPham>() {
+				@Override
+				public SanPham createInstance(Type type) {
+					return new Sach();
+				}
+			};
+
+			// Đăng ký InstanceCreator cho lớp SanPham khi tạo Gson
+			Gson gson = new GsonBuilder().registerTypeAdapter(SanPham.class, sanPhamInstanceCreator).create();
+			String listCTHDS = sc.nextLine();
+			List<ChiTietHoaDon> listCTHD = gson.fromJson(listCTHDS, new TypeToken<List<ChiTietHoaDon>>() {
+			}.getType());
 
 			String path = hd.getMaHD();
 			path = "hoaDonPDF\\" + path + ".pdf";

@@ -11,9 +11,6 @@ import java.net.Socket;
 public class App {
     public static void main(String[] args) throws IOException {
         Socket socket = new Socket("localhost", 5000);
-//        new Login(socket).setVisible(true);
-        new TrangChu_NV(socket).setVisible(true);
-//        new QuanLyHoaDon(socket).setVisible(true);
-//        System.out.println("check");
+        new Login(socket).setVisible(true);
     }
 }
