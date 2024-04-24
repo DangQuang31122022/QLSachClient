@@ -323,7 +323,7 @@ public class QuanLyKhachHang extends javax.swing.JPanel {
                     gioitinh = "Nữ";
                 }
 
-                Object[] rowData = {KH.getMaKhachHang(), KH.getTenKhachHang(), KH.getEmail(), KH.getSoDienThoai(), gioitinh};
+                Object[] rowData = {KH.getMaKhachHang(), KH.getTenKhachHang(), KH.getSoDienThoai(), gioitinh, KH.getEmail()};
                 dtm.addRow(rowData);
             }
         } catch (IOException e) {

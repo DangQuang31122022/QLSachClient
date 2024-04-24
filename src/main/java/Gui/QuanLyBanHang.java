@@ -853,13 +853,14 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 					e.printStackTrace();
 				}
 				clearTableSanPhamBan();
-				lamMoi();
 
 				String txtFieldMaHD = sc.nextLine();
 				jTextFieldMaHD.setText(txtFieldMaHD);
 
 				tongTien = 0;
 				jTextFieldTongTien.setText("");
+
+				lamMoi();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
