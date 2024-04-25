@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69f3e715-a997-4f17-b36a-63d8c75d1108" name="Changes" comment="Get id from db" />
+    <list default="true" id="69f3e715-a997-4f17-b36a-63d8c75d1108" name="Changes" comment="Adjust the logic for the login section on the client">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,8 +179,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Socket forgot password" />
-    <MESSAGE value="Adjust the logic for the login section on the client" />
     <MESSAGE value="Get id from db" />
-    <option name="LAST_COMMIT_MESSAGE" value="Get id from db" />
+    <MESSAGE value="Adjust the logic for the login section on the client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust the logic for the login section on the client" />
   </component>
 </project>
