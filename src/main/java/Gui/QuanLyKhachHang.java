@@ -14,9 +14,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 import com.google.gson.Gson;
@@ -25,8 +23,6 @@ import dao.KhachHangDAO;
 import dao.NhanVienDAO;
 import entity.KhachHang;
 import entity.NhanVien;
-
-import javax.swing.DefaultComboBoxModel;
 
 /**
  *
