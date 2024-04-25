@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69f3e715-a997-4f17-b36a-63d8c75d1108" name="Changes" comment="Adjust the logic for the login section on the client">
-      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/CustomerLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/CustomerLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/StaffLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/StaffLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/SupplierLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../QLSach/src/main/java/buisinesLogic/SupplierLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/QuanLyKhachHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyKhachHang.java" afterDir="false" />
-    </list>
+    <list default="true" id="69f3e715-a997-4f17-b36a-63d8c75d1108" name="Changes" comment="Get id from db" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,7 +142,7 @@
       <workItem from="1713941808178" duration="352000" />
       <workItem from="1713963960790" duration="1384000" />
       <workItem from="1714005137840" duration="3388000" />
-      <workItem from="1714020691409" duration="4612000" />
+      <workItem from="1714020691409" duration="5038000" />
     </task>
     <task id="LOCAL-00001" summary="Socket forgot password">
       <option name="closed" value="true" />
@@ -166,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712245534089</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Get id from db">
+      <option name="closed" value="true" />
+      <created>1714040530294</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714040530294</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +177,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Socket forgot password" />
     <MESSAGE value="Adjust the logic for the login section on the client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjust the logic for the login section on the client" />
+    <MESSAGE value="Get id from db" />
+    <option name="LAST_COMMIT_MESSAGE" value="Get id from db" />
   </component>
 </project>
