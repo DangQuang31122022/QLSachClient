@@ -467,6 +467,41 @@ public class Tab_Sach extends javax.swing.JPanel implements ActionListener,Mouse
     }// </editor-fold>//GEN-END:initComponents
    
     private void jtable_SachMousePressed(java.awt.event.MouseEvent evt) {
+    	String id = (String) jTable_Sach.getValueAt(jTable_Sach.getSelectedRow(), 0);
+    	
+        try {
+            PrintWriter pw = new PrintWriter(socket.getOutputStream(), true);
+            pw.println("QLSP");
+            pw.println("getSachID");
+            pw.println(id);
+
+            Scanner sc = new Scanner(socket.getInputStream());
+            String nhanVien = sc.nextLine();
+            InstanceCreator<Sach> sachInstanceCreator = new InstanceCreator<Sach>() {
+    			@Override
+    			public Sach createInstance(Type type) {
+    				return new Sach();
+    			}
+    		};
+    		Gson gsonSach = new GsonBuilder().registerTypeAdapter(Sach.class, sachInstanceCreator).create();
+    		Sach sach = gsonSach.fromJson(nhanVien, new TypeToken<Sach>() {
+    		}.getType());
+            if (nhanVien.equals("null")) {
+                System.out.println("Không tìm thấy sach");
+                return;
+            }
+         
+            txtMaSach.setText(sach.getMaSP());
+            txtTenSach.setText(sach.getTenSP());
+            cbxTheLoai.setSelectedItem(sach.getTheLoai().getTenTheLoai());
+            cbxNhaCungCap.setSelectedItem(sach.getNhaCungCap().getTenNCC());
+            cbxNhaSanXuat.setSelectedItem(sach.getNhaXuatBan().getTenNXB());
+            txtTacGia.setText(sach.getTacGia());
+            txtSoLuong.setText(String.valueOf(sach.getSoLuongTK()));
+            txtDonGia.setText(String.valueOf(sach.getDonGiaBan()));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     	
     }
     private static String[] Columns= {"MÃ SÁCH", "TÊN SÁCH", "THỂ LOẠI","HÌNH ẢNH", "NHÀ CUNG CẤP", "NHÀ XUẤT BẢN", "TÁC GIẢ", "SỐ LƯỢNG", "ĐƠN GIÁ"};

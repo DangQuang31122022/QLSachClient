@@ -400,9 +400,8 @@ public class Tab_VPP extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                jtable_SachMousePressed(evt);
             }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-            	jtable_SachMousePressed(evt);
-        }
+           
+        
         });
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 1260, 220));
@@ -487,25 +486,46 @@ public class Tab_VPP extends javax.swing.JPanel {
         ImageIcon image = new ImageIcon(newImg);
         return image;
     }
-//    private void jtable_SachMousePressed(java.awt.event.MouseEvent evt) {
-//    	int row = jTable_Sach.getSelectedRow();
-//        DefaultTableModel dtm = (DefaultTableModel) jTable_Sach.getModel();
-//       File file = new File("");
-//       String path= file.getAbsolutePath();
-//       vpp_dao=new VppDao();
-//       String maSP = dtm.getValueAt(row, 0).toString();
-//       VPP vpp =vpp_dao.getVPPByID(maSP);
-//       lblHinhAnh.setIcon(ResizeImage(path + "\\src\\Img\\SanPham\\VPP\\"+vpp.getHinhAnh()));
-//       txtMaSP.setText(vpp.getMaSP());
-//       txtTenSP.setText(vpp.getTenSP());       
-//       cbxNhaCungCap.setSelectedItem(vpp.getNhaCungCap().getTenNCC());
-//       txtXuatXu.setText(vpp.getXuatXu());
-//       cbxMau.setSelectedItem(vpp.getMauSac());
-//       cbxChatLieu.setSelectedItem(vpp.getChatLieu());
-//       txtSoLuong.setText(String.valueOf(vpp.getSoLuongTK()));
-//       txtDonGiaBan.setText(String.valueOf(vpp.getDonGiaBan()));
-//       
-//    }
+    private void jtable_SachMousePressed(java.awt.event.MouseEvent evt) {
+    	String id = (String) jTable_Sach.getValueAt(jTable_Sach.getSelectedRow(), 0);
+    	  File file = new File("");
+          String path= file.getAbsolutePath();
+        try {
+            PrintWriter pw = new PrintWriter(socket.getOutputStream(), true);
+            pw.println("QLSP");
+            pw.println("getVppID");
+            pw.println(id);
+
+            Scanner sc = new Scanner(socket.getInputStream());
+            String nhanVien = sc.nextLine();
+            InstanceCreator<VPP> sachInstanceCreator = new InstanceCreator<VPP>() {
+    			@Override
+    			public VPP createInstance(Type type) {
+    				return new VPP();
+    			}
+    		};
+    		Gson gsonSach = new GsonBuilder().registerTypeAdapter(VPP.class, sachInstanceCreator).create();
+    		VPP vpp = gsonSach.fromJson(nhanVien, new TypeToken<VPP>() {
+    		}.getType());
+            if (nhanVien.equals("null")) {
+                System.out.println("Không tìm thấy vpp");
+                return;
+            }
+            lblHinhAnh.setIcon(ResizeImage(path + "\\src\\Img\\SanPham\\VPP\\"+vpp.getHinhAnh()));
+            txtMaSP.setText(vpp.getMaSP());
+            txtTenSP.setText(vpp.getTenSP());       
+            cbxNhaCungCap.setSelectedItem(vpp.getNhaCungCap().getTenNCC());
+            txtXuatXu.setText(vpp.getXuatXu());
+            cbxMau.setSelectedItem(vpp.getMauSac());
+            cbxChatLieu.setSelectedItem(vpp.getChatLieu());
+            txtSoLuong.setText(String.valueOf(vpp.getSoLuongTK()));
+            txtDonGiaBan.setText(String.valueOf(vpp.getDonGiaBan()));
+            
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    	
+    }
     private static String[] Columns= {"MÃ SẢN PHẨM", "TÊN SẢN PHẨM", "NHÀ CUNG CẤP","HÌNH ẢNH", "XUẤT XỨ", "MÀU SẮC","CHẤT LIỆU","SỐ LƯỢNG", "ĐƠN GIÁ"};
     private void btnXuatExcelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         // TODO add your handling code here:
