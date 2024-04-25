@@ -294,7 +294,7 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 		btnXuatDanhSachHoaDon.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 		btnXuatDanhSachHoaDon.setForeground(new java.awt.Color(102, 153, 255));
 		btnXuatDanhSachHoaDon
-				.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/icons8_ms_excel_30px.png"))); // NOI18N
+				.setIcon(new javax.swing.ImageIcon("src/main/java/Img/icons8_ms_excel_30px.png")); // NOI18N
 		btnXuatDanhSachHoaDon.setText("XUẤT DANH SÁCH HÓA ĐƠN");
 		btnXuatDanhSachHoaDon.setBorder(null);
 		btnXuatDanhSachHoaDon.addActionListener(new java.awt.event.ActionListener() {
@@ -403,7 +403,7 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 		btnXuatChiTietHoaDon.setBackground(new java.awt.Color(153, 255, 204));
 		btnXuatChiTietHoaDon.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 		btnXuatChiTietHoaDon.setForeground(new java.awt.Color(102, 153, 255));
-		btnXuatChiTietHoaDon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/pdf-icon.png"))); // NOI18N
+		btnXuatChiTietHoaDon.setIcon(new javax.swing.ImageIcon("src/main/java/Img/pdf-icon.png")); // NOI18N
 		btnXuatChiTietHoaDon.setText("XUẤT CHI TIẾT HÓA ĐƠN");
 		btnXuatChiTietHoaDon.setBorder(null);
 		btnXuatChiTietHoaDon.addActionListener(new java.awt.event.ActionListener() {
@@ -423,6 +423,16 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 
 	private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnTimKiemActionPerformed
 		// TODO add your handling code here:
+		if (jDateChooserFrom.getDate() == null || jDateChooserTo.getDate() == null) {
+			JOptionPane.showMessageDialog(this, "Vui lòng chọn ngày");
+			return;
+		}
+		
+		else if (jDateChooserFrom.getDate().after(jDateChooserTo.getDate())) {
+			JOptionPane.showMessageDialog(this, "Ngày bắt đầu phải trước ngày kết thúc");
+			return;
+		}
+
 		clearTableHoaDon();
 		clearTableChiTietHoaDon();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");

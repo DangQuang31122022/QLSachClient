@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="69f3e715-a997-4f17-b36a-63d8c75d1108" name="Changes" comment="Adjust the logic for the login section on the client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/QuanLyBanHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyBanHang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Gui/QuanLyKhachHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Gui/QuanLyKhachHang.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +22,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../QLSach" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="JpbToolWindowState">
@@ -137,6 +139,11 @@
       <workItem from="1712905837058" duration="7311000" />
       <workItem from="1713088930146" duration="693000" />
       <workItem from="1713142468113" duration="267000" />
+      <workItem from="1713153912578" duration="298000" />
+      <workItem from="1713250301812" duration="163000" />
+      <workItem from="1713344519083" duration="1592000" />
+      <workItem from="1713925456007" duration="3572000" />
+      <workItem from="1713941808178" duration="352000" />
     </task>
     <task id="LOCAL-00001" summary="Socket forgot password">
       <option name="closed" value="true" />

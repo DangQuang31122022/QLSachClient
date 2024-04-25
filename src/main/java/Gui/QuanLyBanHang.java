@@ -348,7 +348,7 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 		btnThem.setBackground(new java.awt.Color(255, 102, 102));
 		btnThem.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 		btnThem.setForeground(new java.awt.Color(255, 255, 255));
-		btnThem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Add-icon.png"))); // NOI18N
+		btnThem.setIcon(new javax.swing.ImageIcon("src/main/java/Img/Add-icon.png")); // NOI18N
 		btnThem.setText("THÊM");
 		btnThem.setBorder(null);
 		btnThem.addActionListener(new java.awt.event.ActionListener() {
@@ -361,7 +361,7 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 		btnXoaSP.setBackground(new java.awt.Color(255, 51, 102));
 		btnXoaSP.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 		btnXoaSP.setForeground(new java.awt.Color(255, 255, 255));
-		btnXoaSP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/icons8_delete_30px_1.png"))); // NOI18N
+		btnXoaSP.setIcon(new javax.swing.ImageIcon("src/main/java/Img/icons8_delete_30px_1.png")); // NOI18N
 		btnXoaSP.setBorder(null);
 		btnXoaSP.setLabel("XÓA SP");
 		btnXoaSP.addActionListener(new java.awt.event.ActionListener() {
@@ -374,7 +374,7 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 		btnLamMoi.setBackground(new java.awt.Color(102, 255, 102));
 		btnLamMoi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 		btnLamMoi.setForeground(new java.awt.Color(255, 255, 255));
-		btnLamMoi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Refresh-icon.png"))); // NOI18N
+		btnLamMoi.setIcon(new javax.swing.ImageIcon("src/main/java/Img/Refresh-icon.png")); // NOI18N
 		btnLamMoi.setText("LÀM MỚI");
 		btnLamMoi.setBorder(null);
 		btnLamMoi.addActionListener(new java.awt.event.ActionListener() {
@@ -531,7 +531,7 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 		btnXoaAll.setBackground(new java.awt.Color(255, 51, 102));
 		btnXoaAll.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 		btnXoaAll.setForeground(new java.awt.Color(255, 255, 255));
-		btnXoaAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/icons8_delete_30px_1.png"))); // NOI18N
+		btnXoaAll.setIcon(new javax.swing.ImageIcon("src/main/java/Img/icons8_delete_30px_1.png")); // NOI18N
 		btnXoaAll.setBorder(null);
 		btnXoaAll.setLabel("XÓA TẤT CẢ");
 		btnXoaAll.addActionListener(new java.awt.event.ActionListener() {
@@ -586,7 +586,7 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 		btnXacNhan.setBackground(new java.awt.Color(255, 102, 102));
 		btnXacNhan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 		btnXacNhan.setForeground(new java.awt.Color(255, 255, 255));
-		btnXacNhan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Add-icon.png"))); // NOI18N
+		btnXacNhan.setIcon(new javax.swing.ImageIcon("src/main/java/Img/Add-icon.png")); // NOI18N
 		btnXacNhan.setText("XÁC NHẬN");
 		btnXacNhan.setBorder(null);
 		btnXacNhan.addActionListener(new java.awt.event.ActionListener() {
@@ -732,7 +732,8 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 				out.println("thanhToan");
 
 				DefaultTableModel dtmDSSPBan = (DefaultTableModel) jTable_DSSPBan.getModel();
-				String maHD = jTextFieldMaHD.getText();
+//				String maHD = jTextFieldMaHD.getText();
+				String maHD = sc.nextLine();
 				long milis = System.currentTimeMillis();
 				Date now = new Date(milis);
 				SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
@@ -853,13 +854,14 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 					e.printStackTrace();
 				}
 				clearTableSanPhamBan();
-				lamMoi();
 
 				String txtFieldMaHD = sc.nextLine();
 				jTextFieldMaHD.setText(txtFieldMaHD);
 
 				tongTien = 0;
 				jTextFieldTongTien.setText("");
+
+				lamMoi();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
