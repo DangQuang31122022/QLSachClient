@@ -423,6 +423,16 @@ public class QuanLyHoaDon extends javax.swing.JPanel {
 
 	private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnTimKiemActionPerformed
 		// TODO add your handling code here:
+		if (jDateChooserFrom.getDate() == null || jDateChooserTo.getDate() == null) {
+			JOptionPane.showMessageDialog(this, "Vui lòng chọn ngày");
+			return;
+		}
+		
+		else if (jDateChooserFrom.getDate().after(jDateChooserTo.getDate())) {
+			JOptionPane.showMessageDialog(this, "Ngày bắt đầu phải trước ngày kết thúc");
+			return;
+		}
+
 		clearTableHoaDon();
 		clearTableChiTietHoaDon();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
