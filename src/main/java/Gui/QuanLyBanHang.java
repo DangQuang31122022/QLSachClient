@@ -732,7 +732,8 @@ public class QuanLyBanHang extends javax.swing.JPanel {
 				out.println("thanhToan");
 
 				DefaultTableModel dtmDSSPBan = (DefaultTableModel) jTable_DSSPBan.getModel();
-				String maHD = jTextFieldMaHD.getText();
+//				String maHD = jTextFieldMaHD.getText();
+				String maHD = sc.nextLine();
 				long milis = System.currentTimeMillis();
 				Date now = new Date(milis);
 				SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
