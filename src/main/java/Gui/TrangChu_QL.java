@@ -7,6 +7,8 @@ package Gui;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.net.Socket;
+import java.util.List;
+import java.util.Map;
 
 import javax.swing.AbstractAction;
 import javax.swing.ActionMap;
@@ -15,12 +17,28 @@ import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.KeyStroke;
 
+import jakarta.persistence.EntityGraph;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.FlushModeType;
+import jakarta.persistence.LockModeType;
+import jakarta.persistence.Query;
+import jakarta.persistence.StoredProcedureQuery;
+import jakarta.persistence.TypedQuery;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaDelete;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.CriteriaUpdate;
+import jakarta.persistence.metamodel.Metamodel;
+
 /**
  *
  * @author LENOVO
  */
 public class TrangChu_QL extends javax.swing.JFrame {
     private Socket socket;
+   
     /**
      * Creates new form TrangChu
      */
@@ -371,11 +389,11 @@ public class TrangChu_QL extends javax.swing.JFrame {
 
     private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
         // TODO add your handling code here:
-//        trangNen.removeAll();
-//        QuanLySanPham QuanLySanPham = new QuanLySanPham();
-//        trangNen.setLayout(this.getLayout());
-//        trangNen.add(QuanLySanPham);
-//        trangNen.revalidate();
+      trangNen.removeAll();
+       QuanLySanPham QuanLySanPham = new QuanLySanPham(socket);
+       trangNen.setLayout(this.getLayout());
+      trangNen.add(QuanLySanPham);
+      trangNen.revalidate();
     }//GEN-LAST:event_jPanel6MouseClicked
 
     private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
@@ -416,11 +434,11 @@ public class TrangChu_QL extends javax.swing.JFrame {
 
     private void jPanel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel11MouseClicked
         // TODO add your handling code here:
-//        trangNen.removeAll();
-//        QuanLyThongKe QuanLyThongKe = new QuanLyThongKe();
-//        trangNen.setLayout(this.getLayout());
-//        trangNen.add(QuanLyThongKe);
-//        trangNen.revalidate();
+       trangNen.removeAll();
+       QuanLyThongKe QuanLyThongKe = new QuanLyThongKe(socket);
+       trangNen.setLayout(this.getLayout());
+        trangNen.add(QuanLyThongKe);
+        trangNen.revalidate();
     }//GEN-LAST:event_jPanel11MouseClicked
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
@@ -437,11 +455,11 @@ public class TrangChu_QL extends javax.swing.JFrame {
 
     private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
         // TODO add your handling code here:
-//        trangNen.removeAll();
-//        QuanLyPhieuNhap QuanLyPhieuNhap = new QuanLyPhieuNhap();
-//        trangNen.setLayout(this.getLayout());
-//        trangNen.add(QuanLyPhieuNhap);
-//        trangNen.revalidate();
+        trangNen.removeAll();
+        QuanLyPhieuNhap QuanLyPhieuNhap = new QuanLyPhieuNhap(socket);
+        trangNen.setLayout(this.getLayout());
+        trangNen.add(QuanLyPhieuNhap);
+        trangNen.revalidate();
     }//GEN-LAST:event_jPanel7MouseClicked
 
     private void setupKeyboardShortcuts_TrangChuQL() {
@@ -512,20 +530,19 @@ public class TrangChu_QL extends javax.swing.JFrame {
 
     private void handleF3Shortcut() {
         // TODO: Add handling code for F2 shortcut
-//        trangNen.removeAll();
-//        QuanLySanPham QuanLySanPham = new QuanLySanPham();
-//        trangNen.add(QuanLySanPham);
-//        setLocationRelativeTo(null);
-//        trangNen.revalidate();
+        trangNen.removeAll();
+      QuanLySanPham QuanLySanPham = new QuanLySanPham();
+      trangNen.add(QuanLySanPham);
+       trangNen.revalidate();
     }
 
     private void handleF4Shortcut() {
         // TODO: Add handling code for F2 shortcut
-//        trangNen.removeAll();
-//        QuanLyPhieuNhap QuanLyPhieuNhap = new QuanLyPhieuNhap();
-//        trangNen.add(QuanLyPhieuNhap);
-//        setLocationRelativeTo(null);
-//        trangNen.revalidate();
+       trangNen.removeAll();
+       QuanLyPhieuNhap QuanLyPhieuNhap = new QuanLyPhieuNhap();
+       trangNen.add(QuanLyPhieuNhap);
+        setLocationRelativeTo(null);
+       trangNen.revalidate();
     }
 
     private void handleF5Shortcut() {
